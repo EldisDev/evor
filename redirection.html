@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #app {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3498db;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .browsers {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .browser-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .browser-logo:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Changez de navigateur</h1>
+        <p>Oupps ! Désolé, cette page web ne peut pas être chargée par Google Chrome. Veuillez essayer de l'ouvrir avec l'un des navigateurs suivants.</p>
+        
+        <div class="browsers">
+            <img class="browser-logo" src="logo_phoenix.png" alt="Phoenix">
+            <img class="browser-logo" src="logo_firefox.png" alt="Mozilla Firefox">
+            <img class="browser-logo" src="logo_edge.png" alt="Microsoft Edge">
+            <img class="browser-logo" src="logo_opera.png" alt="Opera Mini">
+        </div>
+    </div>
+
+    <script>
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
